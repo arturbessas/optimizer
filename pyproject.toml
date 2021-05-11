@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "coss_ma"
+version = "1.0.0+dev"
+description = ""
+authors = ["Smarttbot Engineering"]
+packages = [
+    { include = "coss_ma" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.9"
+smarttbot-sdk = "^2.10.0"
+smarttbot-observability = "^1.4.0"
+factory_boy = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
+ipdb = "^0.13.3"
+pytest = "^6.0.1"
+pytest-cov = "^2.10.1"
+pytest-flake8 = "^1.0.6"
+flake8 = "^3.8.4"
+pylint = "^2.6.0"
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[[tool.poetry.source]]
+name = "smarttbot"
+url = "https://pypi.smarttbot.com/simple"
+secondary = true
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
