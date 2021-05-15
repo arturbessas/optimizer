@@ -22,24 +22,15 @@ def fazData(dado):
     return datetime.strptime(dado["d"], "%Y-%m-%d %H:%M:%S")
 
 
+class param:
+    def __init__(self):
+        pass
+
+
 def main(args):
-    ano = 2018
-    mes = 1
-    while ano < 2021:
-        inputFile = "dados/dados" + str(ano) + str(mes) + ".json"
-        with open(inputFile, "rb") as json_file:
-            dados = json.load(json_file)
-
-        print(len(dados))
-        print(dados[0])
-
-        calculateCandles(dados)
-
-        if mes == 12:
-            ano += 1
-            mes = 1
-        else:
-            mes += 1
+    teste = param()
+    teste.doido = 1
+    print(teste.doido)
 
 
 def getPrice():
